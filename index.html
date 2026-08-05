@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Multiverse Hero Scanner</title>
+
+    <meta name="description"
+        content="AI Multiverse Hero Scanner - Discover your superhero identity.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- BACKGROUND -->
+<!-- ===================================================== -->
+
+<div class="bg-space"></div>
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+<div class="stars"></div>
+<div class="particles"></div>
+
+<!-- ===================================================== -->
+<!-- TOP HUD -->
+<!-- ===================================================== -->
+
+<header class="hud">
+
+    <div class="hud-left">
+
+        <div class="hud-logo">
+
+            <span class="dot"></span>
+
+            AI MULTIVERSE
+
+        </div>
+
+    </div>
+
+    <div class="hud-center">
+
+        <span class="status-online"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+    <div class="hud-right">
+
+        VERSION 4.0
+
+    </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- LEFT PANEL -->
+<!-- ===================================================== -->
+
+<div class="left-panel">
+
+    <div class="panel-title">
+
+        CORE STATUS
+
+    </div>
+
+    <div class="panel-box">
+
+        <span>AI CORE</span>
+
+        <strong>ACTIVE</strong>
+
+    </div>
+
+    <div class="panel-box">
+
+        <span>MULTIVERSE LINK</span>
+
+        <strong>CONNECTED</strong>
+
+    </div>
+
+    <div class="panel-box">
+
+        <span>SECURITY</span>
+
+        <strong>LEVEL 10</strong>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- RIGHT PANEL -->
+<!-- ===================================================== -->
+
+<div class="right-panel">
+
+    <div class="panel-title">
+
+        LIVE DATA
+
+    </div>
+
+    <div class="mini-chart"></div>
+
+    <div class="signal">
+
+        SIGNAL
+
+        <div class="bars">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- CENTER -->
+<!-- ===================================================== -->
+
+<main class="container">
+
+    <!-- Scanner -->
+
+    <div class="scanner">
+
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
+
+        <div class="scan-line"></div>
+
+        <div class="scanner-core">
+
+            <div class="core-glow"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Glass Panel -->
+
+    <section class="glass-panel">
+
+        <div class="title">
+
+            AI MULTIVERSE
+
+        </div>
+
+        <div class="subtitle">
+
+            HERO SCANNER
+
+        </div>
+
+        <p class="desc">
+
+            Artificial Intelligence Identity Detection System
+
+        </p>
+
+                <!-- =============================== -->
+        <!-- INPUT SCANNER -->
+        <!-- =============================== -->
+
+        <div class="scan-panel">
+
+            <label class="input-label">
+                ENTER YOUR NAME
+            </label>
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Contoh : Marvel Aditya"
+                    maxlength="40">
+
+                <button id="clearBtn">
+                    ✕
+                </button>
+
+                
+
+            </div>
+
+            <button id="scanBtn" class="scan-btn">
+
+                <span class="btn-text">
+                    SCAN IDENTITY
+                </span>
+
+                <span class="btn-glow"></span>
+
+            </button>
+
+        </div>
+
+        <!-- =============================== -->
+        <!-- AI STATUS -->
+        <!-- =============================== -->
+
+        <div class="ai-status">
+
+            <div class="status-header">
+
+                <span>AI STATUS</span>
+
+                <span id="statusPercent">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="loading-bar">
+
+                <div
+                    class="loading-progress"
+                    id="loadingProgress">
+                </div>
+
+            </div>
+
+            <div
+                class="status-text"
+                id="status">
+
+                SYSTEM READY
+
+            </div>
+
+        </div>
+
+        <!-- =============================== -->
+        <!-- HERO CARD -->
+        <!-- =============================== -->
+
+       <div
+            class="hero-card download-card"
+            id="heroCard">
+
+            <div class="hero-top">
+
+            <div class="hero-avatar">
+
+    <img
+        id="heroImage"
+        alt="Hero">
+
+</div>
+                <div>
+
+                    <h2 id="heroName">
+                        UNKNOWN
+                    </h2>
+
+                    <span
+                        id="heroUniverse"
+                        class="hero-universe">
+
+                        UNKNOWN UNIVERSE
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="match-box">
+
+                <div class="match-title">
+
+                    HERO COMPATIBILITY
+
+                    <span
+                        id="matchText">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="match-bar">
+
+                    <div
+                        class="match-fill"
+                        id="matchFill">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat">
+
+                    <span>POWER</span>
+
+                    <h3 id="power">
+                        0
+                    </h3>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>SPEED</span>
+
+                    <h3 id="speed">
+                        0
+                    </h3>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>INTELLIGENCE</span>
+
+                    <h3 id="intel">
+                        0
+                    </h3>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>LEADERSHIP</span>
+
+                    <h3 id="leader">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div
+                class="hero-description"
+                id="heroDesc">
+
+                Waiting for AI analysis...
+
+            </div>
+<!-- AI ANALYSIS -->
+
+<div class="ai-analysis">
+
+
+<div class="analysis-title">
+
+AI ANALYSIS REPORT
+
+</div>
+
+
+<div class="analysis-grid">
+
+
+<div class="analysis-box">
+
+<span>PERSONALITY</span>
+
+<strong id="personality">
+UNKNOWN
+</strong>
+
+</div>
+
+
+<div class="analysis-box">
+
+<span>COMBAT STYLE</span>
+
+<strong id="combat">
+UNKNOWN
+</strong>
+
+</div>
+
+
+<div class="analysis-box">
+
+<span>POWER SOURCE</span>
+
+<strong id="source">
+UNKNOWN
+</strong>
+
+</div>
+
+
+<div class="analysis-box">
+
+<span>TEAM ROLE</span>
+
+<strong id="role">
+UNKNOWN
+</strong>
+
+</div>
+
+
+</div>
+
+
+</div>
+            <div class="hero-actions">
+
+                <button
+                    class="action-btn"
+                    id="downloadBtn">
+
+                    DOWNLOAD CARD
+
+                </button>
+
+                <button
+                    class="action-btn secondary"
+                    id="againBtn">
+
+                    SCAN AGAIN
+
+                </button>
+
+            </div>
+        <div 
+class="card-watermark">
+
+AI MULTIVERSE SCANNER V4.2
+    </div>
+    </div>        
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    AI MULTIVERSE HERO SCANNER
+
+    <span>
+        © 2026 FLAGSHIP ULTRA V4
+    </span>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
